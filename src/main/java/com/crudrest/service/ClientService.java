@@ -21,7 +21,7 @@ public class ClientService {
     ClientRepository clientRepository;
 
     //Find All clients
-    public ResponseEntity<Page<ClientDTO>> findAllClient(PageRequest pageRequest){
+    public ResponseEntity<Page<ClientDTO>> findAllClients(PageRequest pageRequest){
         return ResponseEntity.ok().body(clientRepository.findAll(pageRequest).map(ClientDTO::new));
     }
 
